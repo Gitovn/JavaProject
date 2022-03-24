@@ -1,0 +1,75 @@
+package collection;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.ListIterator;
+
+public class ArrList {
+
+	static Integer aa;
+	static Integer bb;
+
+	public static void main(String[] args) {
+
+		ArrayList<Integer> data = new ArrayList<>();
+
+		Integer a = new Integer(45);
+		Integer b = new Integer(33);
+
+		data.add(a);
+		data.add(b);
+		data.add(new Integer(45));
+		data.add(56);
+		int siz = data.size();
+		System.out.println(siz);
+		Collections.sort(data);
+		System.out.println(data);
+		data.remove(2);
+		data.add(a);
+		data.add(b);
+		data.add(a);
+		data.add(b);
+		System.out.println(data);
+		data.add(aa);
+		data.add(bb);
+		System.out.println(data.size());
+		int c = data.get(3);
+		System.out.println(c);
+		System.out.println(data.get(5));
+		 
+		
+		Iterator<Integer> itr = data.iterator();
+		while(itr.hasNext())
+		{
+			System.out.println(itr.next());
+		}
+		
+		
+		ListIterator<Integer> itr1 = data.listIterator();
+		
+		int count = 0;
+		
+		while(itr1.hasNext())
+		{
+			System.out.println(itr1.next());
+			count++;
+			if(count%2==0)
+			{
+				System.out.println(itr1.previous()); 	
+			}
+		}
+		
+		
+
+		for (int i = 0; i < data.size(); i++) {
+			System.out.println(data.get(i));
+		}
+
+		for (Integer each : data) {
+			System.out.println(each);
+		}
+
+	}
+
+}
