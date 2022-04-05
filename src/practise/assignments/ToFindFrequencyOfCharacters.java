@@ -1,6 +1,6 @@
 package practise.assignments;
 
-public class CodeToFindFrequencyOfCharacters {
+public class ToFindFrequencyOfCharacters {
 
 	public static void main(String[] args) {
 
